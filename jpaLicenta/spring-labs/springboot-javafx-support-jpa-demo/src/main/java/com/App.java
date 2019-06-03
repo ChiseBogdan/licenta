@@ -9,6 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class App extends AbstractJavaFxApplicationSupport {
 
   public static void main(String[] args) {
-    launchApp(App.class, ProjectsView.class, args);
+    launch(App.class, ProjectsView.class, args);
   }
 }

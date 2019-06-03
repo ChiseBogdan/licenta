@@ -1,5 +1,7 @@
 package com.licenta.model;
 
+import org.apache.mahout.cf.taste.recommender.IDRescorer;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,6 +17,8 @@ public class Movie {
     private Integer movieId;
     private String title;
     private Integer year;
+
+    private boolean exclude = false;
 
     @OneToOne
     @JoinColumn(name = "link_id")
@@ -150,5 +154,13 @@ public class Movie {
 
     public void setRatings(List<Rating> ratings) {
         this.ratings = ratings;
+    }
+
+    public boolean isExclude() {
+        return exclude;
+    }
+
+    public void setExclude(boolean exclude) {
+        this.exclude = exclude;
     }
 }

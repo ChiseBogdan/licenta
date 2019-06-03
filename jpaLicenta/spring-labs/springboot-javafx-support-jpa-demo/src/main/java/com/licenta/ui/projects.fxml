@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Text?>
 
-<?import org.controlsfx.control.Rating?>
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-         prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1"
-         xmlns="http://javafx.com/javafx/10.0.1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.licenta.ui.MainController">
     <tabs>
-        <Tab text="Untitled Tab 1">
+        <Tab text="Recommendations">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
                     <children>
-                        <ScrollPane prefHeight="365.0" prefWidth="600.0">
-                            <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="600.0">
-                                    <children>
-                                        <Pane layoutX="45.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0">
-                                            <children>
-                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true"
-                                                           preserveRatio="true"/>
-                                                <Rating></Rating>
-                                            </children>
-                                        </Pane>
-                                    </children>
-                                </AnchorPane>
-                            </content>
+                        <ScrollPane fx:id="movieScrollPane" layoutY="50.0" prefHeight="560.0" prefWidth="800.0">
+                     <content>
+                        <FlowPane fx:id="moviesPane" prefHeight="560.0" prefWidth="780.0" />
+                     </content>
                         </ScrollPane>
+                  <RadioButton fx:id="userUserRadioButton" layoutX="533.0" layoutY="14.0" mnemonicParsing="false" text="User-User" />
+                  <RadioButton fx:id="itemItemRadioButton" layoutX="669.0" layoutY="14.0" mnemonicParsing="false" text="Item-Item" />
+                  <Text layoutX="306.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendations algorithm" />
                     </children>
                 </AnchorPane>
             </content>
         </Tab>
         <Tab text="Untitled Tab 2">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
         </Tab>
     </tabs>
