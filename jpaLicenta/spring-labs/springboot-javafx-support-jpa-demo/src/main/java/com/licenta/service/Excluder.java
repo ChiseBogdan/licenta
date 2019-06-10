@@ -3,23 +3,24 @@ package com.licenta.service;
 import com.licenta.model.Movie;
 import org.apache.mahout.cf.taste.recommender.IDRescorer;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Excluder implements IDRescorer {
 
-    private Map<Long, Movie> excludedMovies = new HashMap<>();
+    private Set<Long> excludedMoviesIDs = new HashSet<>();
 
     public void addNewExcludedMovie(Movie movie){
-        excludedMovies.put((long)movie.getMovieId(), movie);
+        excludedMoviesIDs.add(movie.getMovieId().longValue());
     }
 
     public void addNewExcludedMovies(List<Movie> movies){
         for(Movie movie: movies){
-            excludedMovies.put((long)movie.getMovieId(), movie);
+            excludedMoviesIDs.add(movie.getMovieId().longValue());
         }
+    }
+
+    public Set<Long> getIDsOfExcludedMovies(){
+        return excludedMoviesIDs;
     }
 
     @Override
@@ -30,7 +31,7 @@ public class Excluder implements IDRescorer {
     @Override
     public boolean isFiltered(long key) {
 
-        if(excludedMovies.containsKey(key) == true){
+        if(excludedMoviesIDs.contains(key) == true){
             return true;
         }
 

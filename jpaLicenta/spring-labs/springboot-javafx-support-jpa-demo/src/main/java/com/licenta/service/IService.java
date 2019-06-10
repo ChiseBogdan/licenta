@@ -8,9 +8,19 @@ import java.util.List;
 
 public interface IService {
 
-    List<RecommendedMovieView> getRecommendations(int userId, int numberOfRecommendations, int algorithm);
+    List<RecommendedMovieView> getMahoutRecommendations(int userId, int numberOfRecommendations, int algorithm);
+
+    List<RecommendedMovieView> getLenskitRecommendations(int userId, int numberOfRecommendations, int algorithm);
 
     Image[] getImagesFromMovieULRs(int nrImages, String[] movieLinks);
 
     void giveRatingToMovieByUser(int userId, int movieId, double rating);
+
+    List<RecommendedMovieView> getRandomMovies(int randomMoviesNumber);
+
+    List<RecommendedMovieView> getAllRatedMovies(int userId);
+
+    void systemInitialize(int userId);
+
+    void createTestSets();
 }

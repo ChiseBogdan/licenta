@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.grouplens.grapht:grapht:0.11.0-BETA2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/grouplens/grapht/grapht/0.11.0-BETA2/grapht-0.11.0-BETA2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/grouplens/grapht/grapht/0.11.0-BETA2/grapht-0.11.0-BETA2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/grouplens/grapht/grapht/0.11.0-BETA2/grapht-0.11.0-BETA2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

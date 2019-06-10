@@ -14,22 +14,44 @@
             <content>
                 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
                     <children>
-                        <ScrollPane fx:id="movieScrollPane" layoutY="50.0" prefHeight="560.0" prefWidth="800.0">
+                        <ScrollPane fx:id="recommendationsScrollPane" layoutY="100.0" prefHeight="470.0" prefWidth="800.0">
                      <content>
-                        <FlowPane fx:id="moviesPane" prefHeight="560.0" prefWidth="780.0" />
+                        <FlowPane fx:id="recommendataionsPane" prefHeight="470.0" prefWidth="780.0" />
                      </content>
                         </ScrollPane>
-                  <RadioButton fx:id="userUserRadioButton" layoutX="533.0" layoutY="14.0" mnemonicParsing="false" text="User-User" />
-                  <RadioButton fx:id="itemItemRadioButton" layoutX="669.0" layoutY="14.0" mnemonicParsing="false" text="Item-Item" />
-                  <Text layoutX="306.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendations algorithm" />
+                  <RadioButton fx:id="userUserRadioButton" layoutX="402.0" layoutY="14.0" mnemonicParsing="false" text="User-User" />
+                  <RadioButton fx:id="itemItemRadioButton" layoutX="538.0" layoutY="14.0" mnemonicParsing="false" text="Item-Item" />
+                  <Text layoutX="175.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendations algorithm" />
+                  <RadioButton fx:id="mahoutEngine" layoutX="402.0" layoutY="57.0" mnemonicParsing="false" text="Mahout" />
+                  <RadioButton fx:id="lenskitEngine" layoutX="538.0" layoutY="57.0" mnemonicParsing="false" text="Lenskit" />
+                  <Text layoutX="175.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendations engine" />
                     </children>
                 </AnchorPane>
             </content>
         </Tab>
-        <Tab text="Untitled Tab 2">
+        <Tab text="Browse">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane fx:id="browsingMoviesScrollPane" prefHeight="560.0" prefWidth="800.0">
+                     <content>
+                        <FlowPane fx:id="browsingMoviesPane" prefHeight="560.0" prefWidth="780.0" />
+                     </content>
+                  </ScrollPane>
+               </children></AnchorPane>
             </content>
         </Tab>
+      <Tab text="My ratings">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane fx:id="myRatingScrollPane" prefHeight="560.0" prefWidth="800.0">
+                     <content>
+                        <FlowPane fx:id="myRatingFlowPane" prefHeight="560.0" prefWidth="780.0" />
+                     </content>
+                  </ScrollPane>
+               </children></AnchorPane>
+        </content>
+      </Tab>
     </tabs>
 </TabPane>
